@@ -1,17 +1,510 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Page Title</title>
-    <meta name="description" content="Webpage for xxxx">
-    <!-- http://meyerweb.com/eric/tools/css/reset/ -->
-    <link rel="stylesheet" href="css/reset/reset.css">
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]-->
-  </head>
-  <body> 
-    <h1>ECCV 2020 paper "DeepLandscape: Adversarial Modeling of Landscape Videos"</h1>
-    <h2>Content will be available soon</h2>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="DeepLandscape">
+  <meta name="author" content="O. Khomenko">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <title>DeepLandscape: Adversarial Modeling of Landscape Videos</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">DeepLandscape: Adversarial Modeling of Landscape Videos</h1>
+          <h5 class="mb-5">ECCV 2020 paper</h5>
+        </div>
+        <div class="col-md-10 col-md-8 col-xl-7 mx-auto">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 offset-md-3">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:elimohlATgmailDOTcom" style="text-decoration : none; color : #000000;">
+                E. Logacheva<sup>1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:windj007ATgmailDOTcom" style="text-decoration : none; color : #000000;">
+                R. Suvorov<sup>1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:olegkhomenkoruATgmailDOTcom" style="text-decoration : none; color : #000000;">
+                O. Khomenko<sup>1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 offset-md-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:a.mashikhinATsamsungDOTcom" style="text-decoration : none; color : #000000;">
+                A. Mashikhin<sup>1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>V. Lempitsky<sup>1,2</sup></h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-md-3 col-md-6 padtop">
+        <span class="align-middle">
+          <p class="mylead2">
+            <sup>1</sup><a href="https://research.samsung.com/aicenter_moscow">Samsung AI Center, Moscow, Russia</a><br>
+            <sup>2</sup><a href="https://www.skoltech.ru/en/">Skolkovo Institute of Science and Technology, Moscow,
+              Russia</a><br>
+        </span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1 col-md-2">
+          <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123680256.pdf"
+            style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-file-text m-auto text-primary"></i>
+              </div>
+              <h3>Paper</h3>
+              <p class="mylead mb-0">Download pdf</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Appendix -->
+        <div class="col-md-2">
+          <a href="./paper/DeepLandscape_Adversarial_Modeling_of_Landscape_Videos.pdf"
+            style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-camera m-auto text-primary"></i>
+              </div>
+              <h3>Appendix</h3>
+              <p class="mylead mb-0">Hi-res version</p>
+            </div>
+          </a>
+        </div>
+        <!-- Appendix -->
+        <div class="col-md-2">
+          <a href="https://www.youtube.com/playlist?list=PLoFHNAyFqnqXaHui3DrX99U67B46bJTBq"
+            style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-youtube-play m-auto text-primary"></i>
+              </div>
+              <h3>Video</h3>
+              <p class="mylead mb-0">Watch the video<br></p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-2">
+          <a href="https://github.com/saic-mdal/deep-landscape" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-github-square m-auto text-primary"></i>
+              </div>
+              <h3>Code</h3>
+              <p class="mylead mb-0">Checkout the code<br></p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-2">
+          <a href="./cite.txt" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-graduation-cap m-auto text-primary"></i>
+              </div>
+              <h3>Bibtex</h3>
+              <p class="mylead mb-0">Cite the paper</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container">
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>Abstract</h2>
+          <p class="lead mb-0" align="justify">
+            We build a new model of landscape videos that can be trained
+            on a mixture of static landscape images as well as landscape animations.
+            Our architecture extends StyleGAN model by augmenting it with
+            parts that allow to model dynamic changes in a scene. Once trained, our
+            model can be used to generate realistic time-lapse landscape videos with
+            moving objects and time-of-the-day changes. Furthermore, by fitting the
+            learned models to a static landscape image, the latter can be reenacted
+            in a realistic way. We propose simple but necessary modifications to
+            StyleGAN inversion procedure, which lead to in-domain latent codes
+            and allow to manipulate real images. Quantitative comparisons and user
+            studies suggest that our model produces more compelling animations of
+            given photographs than previously proposed methods. The results of our
+            approach including comparisons with prior art can be seen in the paper, supplementary materials and on the
+            project page.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-2 col-md-8 text-white">
+          <img class="img-fluid mb-3" src="img/01_intro_grid.jpg" alt="" width="1080px">
+        </div>
+      </div>
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>DeepLandscape in 1 min.</h2>
+        </div>
+      </div>
+
+      <div class="offset-md-1 col-md-8 row iframe-container col-md-10">
+        <iframe src="https://www.youtube.com/embed/2CoQRf5qXWY" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br /><br />
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>DeepLandscape explained</h2>
+        </div>
+      </div>
+
+      <div class="row iframe-container col-md-10 offset-md-1">
+        <iframe src="https://www.youtube.com/embed/mnYIx9DwVlE" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>Model Overview</h2>
+        </div>
+      </div>
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h4>Model architecture</h4>
+          <p class="lead mb-0" align="justify">
+            The architecture of our DeepLandscape model is based on StyleGAN and has four
+            sets of latent variables $z^{st}$ (encodes colors and the general scene layout), $z^{dyn}$ (encodes global
+            lighting, e.g. time of day),
+            $S^{st}$ (a set of square matrices which encode shapes and details of static objects and $S^{dyn}$ (a set of
+            square matrices which
+            encode shapes and details of dynamic objects).
+            <br />
+
+            The model is trained from two sources of data, the dataset of static scenery images $\mathcal{I}$ and the
+            dataset of timelapse scenery videos $\mathcal{V}$.
+            It is relatively easy to collect a large static dataset, while with our best
+            efforts we were able to collect a few hundreds of videos, that do not cover all
+            the diversity of landscapes. Thus, both sources of data have to be utilized in
+            order to build a good model. To do that, we train our generative model in an
+            adversarial way with two different discriminators.
+            To create a plausible landscape animation (video), the model should preserve static details (buildings,
+            fields, mountains) from the original image
+            and move objects such ad clouds and waves).
+            <br />
+            We implement the training mode containing two discriminators: $D_{st}$ (static) and $D_{dyn}$ (pairwise
+            discriminator).
+            In this work we propose to use a simplified temporal discriminator ($D_{dyn}$), which only looks at
+            unordered pairs of frames.
+
+            We augment the fake set of frames with pairs of crops taken from same
+            video frame, but from different locations. Since these crops have the same visual
+            quality as the images in real frames, and since they come from the same videos
+            as images within real pairs, the pairwise discriminator effectively stops paying
+            attention to image quality, cannot simply overfit to the statistics of scenes in the
+            video dataset, and has to focus on finding pairwise inconsistencies within fake
+            pairs.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="offset-md-2 col-md-8 text-white">
+            <img class="img-fluid mb-3" src="img/02_architecture.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h4>Animating Real Scenery Images</h4>
+          <p class="lead mb-0" align="justify">
+            To animate a given (real) scenery image $I$, we find (infer) a set of latent variables that produce such
+            image within the generator.
+            We perform inference using the following three-step procedure:
+            <br \>
+            <b>Step 1:</b> Predict a set of style vectors $W^{\prime}$ (the notation is described in the paper) using a
+            feedforward encoder
+            network.<br />
+            <b>Step 2:</b> Starting from $\mathcal{W}^\prime$ and zero $\mathcal{S}$, we optimize all latents to improve
+            reconstruction error.<br />
+            <b>Step 3:</b> Freezing latents and fine-tuning the weights of $\mathbf{G}$ to further drive
+            down the reconstruction error.
+            Lighting manipulation is performed using a separate neural network $\mathbf{A}$ to approximate $\mathbf{M}$
+            ($\mathbf{z}=\mathbf{M}^{-1}(\mathbf{w})$)
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img class="img-fluid img-border" src="img/grids/00_grid.jpg">
+          <img class="img-fluid img-border" src="img/grids/01_grid.jpg">
+        </div>
+      </div>
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>Results</h2>
+        </div>
+      </div>
+
+      <!-- Landscapes -->
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h4>Landscapes</h4>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row myrow">
+          <div class="offset-md-1 col-md-10">
+            <div class="my_table_cell">
+              <div class="row iframe-container">
+                <iframe src="https://www.youtube.com/embed/nnsqfcqZutg?controls=0" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="lead mb-0" align='justify'>
+                To animate scenery images we use spatial maps ($S^{dyn}$): we sample $S^{st}$ and $S^{dyn,1}$
+                from a unit normal distribution and then warp the $S^{dyn}$ tensor continuously
+                using a homography to obtain $S^{dyn,2}, S^{dyn,3}, ..., S^{dyn,n}$. To change daytime
+                in the video sequence the model uses linear interpolation between two randomly sampled $z^{dyn} \in
+                \mathbf{R}^{D^{dyn}}$ vectors.
+            </div>
+            <div class="my_table_cell">
+              <table>
+                <tr>
+                  <td><img src="img/gifs/1-8386618637_2bf4954799_k_homman1.mp4_frames.gif" class="img-border"></td>
+                  <td><img src="img/gifs/2-1336_homman3.mp4_frames.gif" class="img-border"></td>
+                </tr>
+                <tr>
+                  <td><img src="img/gifs/1-8182576592_f8a3754bc4_k_homman1.mp4_frames.gif" class="img-border"></td>
+                  <td><img src="img/gifs/1-seoul-1_homman2.mp4_frames.gif" class="img-border"></td>
+                </tr>
+              </table>
+              <p class="lead mb-0" align='justify'>
+                The original content image (real) is encoded into $G$'s latent space and animated (with different
+                daytime styles). <small>Note: GIF format leads to quality loss</small>
+                <!-- (top left),  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h4>High Resolution</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-4">
+          <img src="img/sr/claudio/gt.jpg" class="img-fluid vertical-center img-border" />
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/sr/claudio/lr_8.jpg" class="img-fluid vertical-center img-border" />
+            </div>
+            <div class="col-md-8">
+              <img src="img/sr/claudio/hr_8.jpg" class="img-fluid img-border" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/sr/claudio/lr_107.jpg" class="img-fluid vertical-center img-border" />
+            </div>
+            <div class="col-md-8">
+              <img src="img/sr/claudio/hr_107.jpg" class="img-fluid img-border" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-4 text-center">Original Image <br />(960px)</div>
+        <div class="col-md-2 text-center">Encoded Images (256px)</div>
+        <div class="col-md-4 text-center">Hi-res Encoded Images <br /> (960px)</div>
+      </div>
+      <div class="row">
+        <p class="lead mb-0 offset-md-1 col-md-10" align='justify'>
+          The proposed approach also supports increasing resolution up to 4 times by each size
+          using Super Resolution technique described in the paper.
+      </div>
+
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h4>Artworks</h4>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="offset-md-1 col-md-10">
+            <div class="offset-md-1 col-md-8 row iframe-container col-md-10">
+              <iframe src="https://www.youtube.com/embed/n1aSnJpCfPM" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                iv_load_policy="3"></iframe>
+            </div>
+            <p class="lead mb-0" align='justify'>
+              It is possible to use the trained model to animate out of domain images such as artworks.
+          </div>
+        </div>
+      </div>
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>Citation</h2>
+          <p class="lead mb-0" align="justify">
+            E. Logacheva, R. Suvorov, O. Khomenko, A. Mashikhin, and V. Lempitsky. "High-Resolution Daytime Translation
+            Without Domain Labels." In 2020 Europeran Conference on Computer Vision (ECCV).
+          </p>
+          <br />
+          <a href="./cite.txt" class="footer-icon">
+            <p class="lead mb-0" align='justify'>or use Bibtex</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="row myrow">
+        <div class="offset-md-1 col-md-10">
+          <h2>Related Work</h2>
+          <ul>
+            <li><a href="https://github.com/NVlabs/stylegan">A Style-Based Generator Architecture for Generative
+                Adversarial Networks</a> in CVPR 2019</li>
+            <li><a href="http://www.cgg.cs.tsukuba.ac.jp/~endo/projects/AnimatingLandscape/">Animating Landscape:
+                Self-Supervised Learning of Decoupled Motion and Appearance for Single-Image Video Synthesis</a> in
+              SIGGRAPH Asia 2019</li>
+          </ul>
+        </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 h-100 text-center text-lg-left my-auto">
+          <p class="footer-text mb-4 mb-lg-0">DeepLandscape: Adversarial Modeling of Landscape Videos</p>
+        </div>
+        <div class="col-md-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123680256.pdf" class="footer-icon">
+                <i class="fa fa-file-text-o"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="./paper/High-Resolution_Daytime_Translation_Without_Domain_Labels.pdf" class="footer-icon">
+                <i class="fa fa-file-image-o"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="https://github.com/saic-mdal/deep-landscape/tree/master/docs/vids" class="footer-icon">
+                <i class="fa fa-file-video-o"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="https://www.youtube.com/playlist?list=PLoFHNAyFqnqXaHui3DrX99U67B46bJTBq" class="footer-icon">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/saic-mdal/deep-landscape" class="footer-icon">
+                <i class="fa fa-git"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="./cite.txt" class="footer-icon">
+                <i class="icon-graduation"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
