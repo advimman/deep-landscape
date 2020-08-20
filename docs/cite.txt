@@ -1,0 +1,12 @@
+@inproceedings{Logacheva_2020_ECCV,
+  author = {Logacheva, Elizaveta and
+            Suvorov, Roman and
+            Khomenko, Oleg and
+            Mashikhin, Anton and
+            Lempitsky, Victor
+  },
+  title = {DeepLandscape: Adversarial Modeling of Landscape Videos},
+  booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+  month = {August},
+  year = {2020},
+}
