@@ -7,28 +7,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700
 }
 
-header.masthead {
-  position: relative;
-  background-color: #93d7f5;
-  background-image: url(../img/00_teaser.png);
-  background no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem
-}
 
-header.masthead .overlay {
+/* header.masthead .overlay {
   position: absolute;
   background-color: #212529;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: .3
-}
+} */
 
 header.masthead h1 {
   font-size: 2rem
@@ -36,14 +23,14 @@ header.masthead h1 {
 
 @media (min-width:768px) {
   header.masthead {
-    padding-top: 4rem;
-    padding-bottom: 2rem
+    /* height: fit-content; */
   }
 
   header.masthead h1 {
     font-size: 3rem
   }
 }
+
 
 .showcase .showcase-text {
   padding: 3rem
@@ -215,4 +202,50 @@ footer.footer {
 .img-border {
   border: 2px solid white;
   border-radius: 10px;
+}
+
+
+header.masthead {
+  position: relative;
+  background: rgb(2,0,36);
+  background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(61,61,70,1) 35%, rgba(0,212,255,1) 100%);
+  background no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  padding-bottom: 2.05rem;
+}
+
+header.img-masthead {
+  background-image: url(../img/00_teaser.png);
+}
+
+/* VIDEO */
+.video {
+  width: 100%;
+  /* transform: translate(-50%, -50%); */
+  left: 0%;
+  top: 0%;
+  /* z-index: 0; */
+  position: absolute;
+}
+
+.video-grid {
+  width: 256px;
+  border-radius: 10px;
+  position: inherit;
+}
+
+.video-header {
+  top: 0%;
+  opacity: 1;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+.title {
+  background-color: rgb(37, 35, 35, 0.8);
 }
