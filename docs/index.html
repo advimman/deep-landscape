@@ -40,14 +40,19 @@
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
-    <div class="overlay"></div>
     <div class="container">
+      <div class="overlay"></div>
       <div class="row">
+        <div class="offset-md-1 col-md-10">
+        <video class="video video-header" loop="loop" autoplay muted>
+          <source src="vids/video_200_halfsize.webm" type="video/webm" />
+          Your browser doesn't support video
+        </video>
+      </div>
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">DeepLandscape: Adversarial Modeling of Landscape Videos</h1>
-          <h5 class="mb-5">ECCV 2020 paper</h5>
-        </div>
-        <div class="col-md-10 col-md-8 col-xl-7 mx-auto">
+          <br /><br />
+          <h1 class="mb-5"><span class="title">DeepLandscape: Adversarial Modeling of Landscape Videos</span></h1>
+          <h5 class="mb-5"><span class="title">ECCV 2020 paper</span></h5>
         </div>
       </div>
     </div>
@@ -106,17 +111,13 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="offset-md-3 col-md-6 padtop">
-        <span class="align-middle">
-          <p class="mylead2">
-            <sup>1</sup><a href="https://research.samsung.com/aicenter_moscow">Samsung AI Center, Moscow, Russia</a><br>
-            <sup>2</sup><a href="https://www.skoltech.ru/en/">Skolkovo Institute of Science and Technology, Moscow,
-              Russia</a><br>
-        </span>
+      <div class="row">
+        <div class="offset-md-3 col-md-6 mylead2 padtop">
+          <sup>1</sup><a href="https://research.samsung.com/aicenter_moscow">Samsung AI Center, Moscow, Russia</a><br />
+          <sup>2</sup><a href="https://www.skoltech.ru/en/">Skolkovo Institute of Science and Technology, Moscow,
+            Russia</a><br />
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -336,35 +337,49 @@
       </div>
       <div class="container">
         <div class="row myrow">
-          <div class="offset-md-1 col-md-10">
-            <div class="my_table_cell">
-              <div class="row iframe-container">
-                <iframe src="https://www.youtube.com/embed/nnsqfcqZutg?controls=0" frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+          <div class="offset-md-1 col-md-4">
+            <div class="row iframe-container">
+              <iframe src="https://www.youtube.com/embed/nnsqfcqZutg?controls=0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
               <p class="lead mb-0" align='justify'>
                 To animate scenery images we use spatial maps ($S^{dyn}$): we sample $S^{st}$ and $S^{dyn,1}$
                 from a unit normal distribution and then warp the $S^{dyn}$ tensor continuously
                 using a homography to obtain $S^{dyn,2}, S^{dyn,3}, ..., S^{dyn,n}$. To change daytime
                 in the video sequence the model uses linear interpolation between two randomly sampled $z^{dyn} \in
                 \mathbf{R}^{D^{dyn}}$ vectors.
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_4/1-8182576592_f8a3754bc4_k_folder.webm" type="video/webm" />
+                  <img src="img/gifs/1-8386618637_2bf4954799_k_homman1.mp4_frames.gif" class="img-border">
+                </video>
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_4/1412_color_10-1.webm" type="video/webm" />
+                  <img src="img/gifs/2-1336_homman3.mp4_frames.gif" class="img-border">
+                </video>
+                </div>
+              <div class="col-md-6">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_4/1-claudio-testa--SO3JtE3gZo-unsp.webm" type="video/webm" />
+                  <img src="img/gifs/1-8182576592_f8a3754bc4_k_homman1.mp4_frames.gif" class="img-border">
+                </video>
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_4/1092_color_2-1.webm" type="video/webm" />
+                  <img src="img/gifs/1-seoul-1_homman2.mp4_frames.gif" class="img-border">
+                </video>
+              </div>
             </div>
-            <div class="my_table_cell">
-              <table>
-                <tr>
-                  <td><img src="img/gifs/1-8386618637_2bf4954799_k_homman1.mp4_frames.gif" class="img-border"></td>
-                  <td><img src="img/gifs/2-1336_homman3.mp4_frames.gif" class="img-border"></td>
-                </tr>
-                <tr>
-                  <td><img src="img/gifs/1-8182576592_f8a3754bc4_k_homman1.mp4_frames.gif" class="img-border"></td>
-                  <td><img src="img/gifs/1-seoul-1_homman2.mp4_frames.gif" class="img-border"></td>
-                </tr>
-              </table>
+            <div class="row">
+              <div class="col-md-12">
               <p class="lead mb-0" align='justify'>
-                The original content image (real) is encoded into $G$'s latent space and animated (with different
-                daytime styles). <small>Note: GIF format leads to quality loss</small>
-                <!-- (top left),  -->
+                The original (real) content image is encoded into $G$'s latent space and animated (with different
+                daytime styles).<br /><small>Note: webm format leads to image quality loss</small>
+              </div>
             </div>
           </div>
         </div>
@@ -407,7 +422,6 @@
           The proposed approach also supports increasing resolution up to 4 times by each size
           using Super Resolution technique described in the paper.
       </div>
-
 
       <div class="row myrow">
         <div class="offset-md-1 col-md-10">
@@ -501,7 +515,6 @@
       </div>
     </div>
   </footer>
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
