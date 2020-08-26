@@ -114,9 +114,6 @@ footer.footer {
   padding-bottom: 0.5rem
 }
 
-.myp {
-  padding-bottom: 2rem
-}
 
 .mybib-out {
   position: absolute;
@@ -240,6 +237,19 @@ header.img-masthead {
 .video-header {
   top: 0%;
   opacity: 1;
+}
+
+.video-pad-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.video-pad-left-5 {
+  padding-left: 5px;
+}
+
+.video-pad-right-5 {
+  padding-right: 5px;
 }
 
 video::-webkit-media-controls {
