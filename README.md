@@ -7,6 +7,9 @@ Official repository for the paper E. Logacheva, R. Suvorov, O. Khomenko, A. Mash
 
 ![teaser image](./docs/img/01_intro_grid.jpg)
 
+## GIF sample
+<img src="./docs/img/gifs/2-1336_homman3.mp4_frames.gif" width="200" style="border-radius: 15px;" alt="gif sample #1">
+
 ## Code
 __TBD__
 

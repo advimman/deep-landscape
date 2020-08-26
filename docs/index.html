@@ -44,11 +44,11 @@
       <div class="overlay"></div>
       <div class="row">
         <div class="offset-md-1 col-md-10">
-        <video class="video video-header" loop="loop" autoplay muted>
-          <source src="vids/video_200.webm" type="video/webm" />
-          Your browser doesn't support video
-        </video>
-      </div>
+          <video class="video video-header" loop="loop" autoplay muted>
+            <source src="vids/video_200.webm" type="video/webm" />
+            Your browser doesn't support .webm video
+          </video>
+        </div>
         <div class="col-xl-9 mx-auto">
           <br /><br />
           <h1 class="mb-5"><span class="title">DeepLandscape: Adversarial Modeling of Landscape Videos</span></h1>
@@ -337,10 +337,61 @@
       </div>
       <div class="container">
         <div class="row myrow">
-          <div class="offset-md-1 col-md-4">
-            <div class="row iframe-container">
+          <div class="col-md-6">
+            <!-- <div class="row iframe-container">
               <iframe src="https://www.youtube.com/embed/nnsqfcqZutg?controls=0" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
+            <div class="row">
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/103_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/110_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/112_445001.webm" type="video/webm">
+                </video>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/118_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/93_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/130_445001.webm" type="video/webm">
+                </video>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/34_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/13_445001.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="col-md-4">
+                <video class="video video-grid img-fluid" loop="loop" autoplay muted>
+                  <source src="vids_9/144_445001.webm" type="video/webm">
+                </video>
+              </div>
             </div>
             <div class="row">
               <p class="lead mb-0" align='justify'>
@@ -349,36 +400,40 @@
                 using a homography to obtain $S^{dyn,2}, S^{dyn,3}, ..., S^{dyn,n}$. To change daytime
                 in the video sequence the model uses linear interpolation between two randomly sampled $z^{dyn} \in
                 \mathbf{R}^{D^{dyn}}$ vectors.
-              </div>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="row">
               <div class="col-md-6">
                 <video class="video video-grid img-fluid" loop="loop" autoplay muted>
                   <source src="vids_4/1-8182576592_f8a3754bc4_k_folder.webm" type="video/webm" />
+                  <source src="vids_4/1-8182576592_f8a3754bc4_k_folder.mp4" type="video/mp4" />
                   <img src="img/gifs/1-8386618637_2bf4954799_k_homman1.mp4_frames.gif" class="img-border">
                 </video>
                 <video class="video video-grid img-fluid" loop="loop" autoplay muted>
                   <source src="vids_4/1412_color_10-1.webm" type="video/webm" />
+                  <source src="vids_4/1412_color_10-1.mp4" type="video/mp4" />
                   <img src="img/gifs/2-1336_homman3.mp4_frames.gif" class="img-border">
                 </video>
-                </div>
+              </div>
               <div class="col-md-6">
                 <video class="video video-grid img-fluid" loop="loop" autoplay muted>
                   <source src="vids_4/1-claudio-testa--SO3JtE3gZo-unsp.webm" type="video/webm" />
+                  <source src="vids_4/1-claudio-testa--SO3JtE3gZo-unsp.mp4" type="video/mp4" />
                   <img src="img/gifs/1-8182576592_f8a3754bc4_k_homman1.mp4_frames.gif" class="img-border">
                 </video>
                 <video class="video video-grid img-fluid" loop="loop" autoplay muted>
                   <source src="vids_4/1092_color_2-1.webm" type="video/webm" />
+                  <source src="vids_4/1092_color_2-1.mp4" type="video/mp4" />
                   <img src="img/gifs/1-seoul-1_homman2.mp4_frames.gif" class="img-border">
                 </video>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-              <p class="lead mb-0" align='justify'>
-                The original (real) content image is encoded into $G$'s latent space and animated (with different
-                daytime styles).<br /><small>Note: webm format leads to image quality loss</small>
+                <p class="lead mb-0" align='justify'>
+                  The original (real) content image is encoded into $G$'s latent space and animated (with different
+                  daytime styles).<br /><small>Note: webm format leads to image quality loss</small>
               </div>
             </div>
           </div>
@@ -419,7 +474,7 @@
       </div>
       <div class="row">
         <p class="lead mb-0 offset-md-1 col-md-10" align='justify'>
-          The proposed approach also supports increasing resolution up to 4 times by each size
+          The proposed approach also supports increasing resolution up to 4 times by each side
           using Super Resolution technique described in the paper.
       </div>
 
@@ -447,7 +502,8 @@
           <h2>Citation</h2>
           <p class="lead mb-0" align="justify">
             E. Logacheva, R. Suvorov, O. Khomenko, A. Mashikhin, and V. Lempitsky.
-            "DeepLandscape: Adversarial Modeling of Landscape Videos" In 2020 Europeran Conference on Computer Vision (ECCV).
+            "DeepLandscape: Adversarial Modeling of Landscape Videos" In 2020 Europeran Conference on Computer Vision
+            (ECCV).
           </p>
           <br />
           <a href="./cite.txt" class="footer-icon">
