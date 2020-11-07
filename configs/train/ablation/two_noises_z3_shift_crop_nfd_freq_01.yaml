@@ -1,0 +1,13 @@
+samples_per_phase: 600_000
+
+max_size: 128
+from_rgb_activate: false
+mixing: true
+loss_fn: 'r1'
+n_frames_params:
+    n: 2
+    loss_coef: 1
+    final_freq: 0.1
+    two_noises: true
+    crop_freq: 0.5
+    dyn_style_coordinates: 3

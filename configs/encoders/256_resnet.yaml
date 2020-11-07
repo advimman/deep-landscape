@@ -1,0 +1,28 @@
+data: encoder_train_dataset/256_475000
+train_size: 0.7
+
+encoder_kwargs:
+  num_levels: 7
+  w_size: 512
+  w_bottleneck_size: 2048
+
+loss_kwargs:
+  model_name: 256
+  iteration: 475000
+
+dataset_kwargs:
+  batch_size: 6
+  latent_names: [latent_wprime, images]
+
+train_eval_loop_kwargs:
+  epoch_n: 100
+  early_stopping_patience: 50
+  max_batches_per_epoch_train: 10000
+  max_batches_per_epoch_val: 1000
+  save_vis_images_freq: 1000
+  save_models_freq: 3
+
+lr_scheduler:
+  factor: 0.5
+  patience: 5
+  verbose: True

@@ -1,0 +1,34 @@
+name: sr
+model: srgan
+distortion: sr
+scale: 4
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+
+datasets:
+  test_1:
+    resolution: 960 # desired resolution. Max resolution = 1024 - you need videocard, with more than 11gb 
+    name: "predict"
+    use_HR_ref: true
+    square_image: true
+    mode: dataset 
+    data_type: lmdb
+    dataroot_HR: inputs/hr 
+    dataroot_LR: inputs/videos
+
+#### network structures
+network_G:
+  which_model_G: RRDBNetSEG # SR with segmentation
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  nb: 23
+
+#### path
+path:
+  pretrain_model_G: weights/G.pth
+  root: outputs # where to store predicted outputs
+  pretrain_model_G_strict_load: true
+
+train:
+  segm_mask: [-1, ] # use the whole ref HR to create mask without resizes
+  use_HR_ref: True # use HR image

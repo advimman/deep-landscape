@@ -1,0 +1,14 @@
+torch
+torchvision
+tensorboardX
+tqdm
+kornia==0.2.0
+pyyaml
+opencv-python
+lmdb
+pillow
+easydict
+scikit-image
+numpy
+pandas
+seaborn

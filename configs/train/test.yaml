@@ -1,0 +1,14 @@
+samples_per_phase: 60
+
+max_size: 256
+from_rgb_activate: false
+mixing: true
+loss_fn: 'r1'
+n_frames_params:
+    n: 2
+    loss_coef: 1
+    final_freq: 0.1
+    decay_duration: 60
+    two_noises: true
+    crop_freq: 0.5
+    moving_style_coordinates: 3
