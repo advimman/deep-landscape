@@ -36,9 +36,7 @@ To use the 256x256 generator run
 Results will be saved in `results/generated`
 
 ### Calculate Metrics
-* Put test images into `results/test_images`.
-* Split test videos to frames: `vid_dl/create_images.py <input directory> results/test_videos`.
-* ``PYTHONPATH=`pwd`:$PYTHONPATH runfiles/calc_metrics_make_report_test_all256.sh <homography_dir>``
+TBD
 
 ### Super-Resoultion
 See [superres/README.md](superres/README.md)
