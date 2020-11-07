@@ -1,0 +1,97 @@
+max_in_resolution: 600
+encoder_checkpoint: encoders/256_resnet/models/best_model.pth
+init_noise_scale: 0
+take_only_latents: latent_wprime
+
+decoder_kwargs:
+  mode: latent_w_prime_noise
+  model_name: 256
+  iteration: 475000
+
+fine_tune_kwargs:
+  lr: 0.1
+  max_iters: 500
+  early_stopping_patience: 500
+  early_stopping_eps: 0.001
+  reduce_lr_patience: 20
+  reduce_lr_factor: 0.5
+  reconstr_l1_coef: 1
+  pl_coef: 0.01
+  w_init_l2_reg_coef: 1
+  optimize_only_keys: [
+    latent_wprime:0:0, latent_wprime:0:1, latent_wprime:1:0, latent_wprime:1:1,
+    latent_wprime:2:0, latent_wprime:2:1, latent_wprime:3:0, latent_wprime:3:1,
+    latent_wprime:4:0, latent_wprime:4:1, latent_wprime:5:0, latent_wprime:5:1,
+    latent_wprime:6:0, latent_wprime:6:1,
+    noise:0:0, noise:1:0, noise:2:0, noise:3:0, noise:4:0, noise:5:0, noise:6:0,
+    noise:0:1, noise:1:1, noise:2:1, noise:3:1, noise:4:1, noise:5:1, noise:6:1
+  ]
+  noise_grad_scale: 0.001
+  latent_w_grad_scale_still: 1
+  latent_w_grad_scale_movable: 1
+
+generator_fine_tune_kwargs:
+  max_iters: 500
+  lr: 0.001
+  l1_coef: 1
+  pl_coef: 0.1
+
+shift_kwargs:
+  steps: 100
+  shift_names:
+    - noise:0:1
+    - noise:1:1
+    - noise:2:1
+    - noise:3:1
+    - noise:4:1
+    - noise:5:1
+    - noise:6:1
+  rescale_after_shift: True
+  max_shift: 200
+  min_shift: -200
+  shift_in_hr: 256
+  num_real_homs_per_image: 5
+  animate_w_names: [latent_wprime:4:0, latent_wprime:4:1, latent_wprime:5:0, latent_wprime:5:1,
+    latent_wprime:6:0, latent_wprime:6:1]
+  target_z_func:
+    mlp_approx_model: encoders/256_mlp/models/best_model.pth
+    steps:
+      - time: 0
+        z: [ -1.5, -1.5, 0, 0.7]  # blue day
+      - time: 0.125
+        z: [ -1.5,  1.5, 0, 0.7]  # white bright day
+      - time: 0.25
+        z: [ -1, 2, 0, 0.7]  # day with more clouds or red sunset / day to bright evening
+      - time: 0.375
+        z: [ 0, 3.5, 0, 0.7]  # light sunset, day to sunset
+      - time: 0.5
+        z: [1.5, 3.5, 0, 0.7]  # warmer sunset
+      - time: 0.625
+        z: [2, 1, 0, 0.7]  # blue hour
+      - time: 0.75
+        z: [2.5, 0, 0, 0.7]  # deep night
+      - time: 0.875
+        z: [2.5, -1.5, 0, 0.7]  # blue morning
+      - time: 1
+        z: [-1.5, -1.5, 0, 0.7]  # blue day
+    kwargs:
+      k: 3
+      bc_type: clamped
+
+video_kwargs:
+  fps: 30
+
+#segmentation: False
+segmentation:
+  module_kwargs:
+    models_dirname: pretrained_models/ade20k-resnet50dilated-ppm_deepsup
+  erode: 0
+  predict_kwargs:
+    imgSizes: [256]
+  movable_classes: [2, 21]
+
+infer_using_mask: True
+
+full_output: False
+save_frames_as_jpg: False
+calc_metrics: False

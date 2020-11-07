@@ -1,0 +1,73 @@
+max_in_resolution: 600
+encoder_checkpoint: encoders/512_resnet/models/best_model.pth
+init_noise_scale: 0
+take_only_latents: latent_wprime
+
+decoder_kwargs:
+  mode: latent_w_prime_noise
+  model_name: 512
+  iteration: 445000
+
+fine_tune_kwargs:
+  lr: 0.1
+  max_iters: 500
+  early_stopping_patience: 500
+  early_stopping_eps: 0.001
+  reduce_lr_patience: 20
+  reduce_lr_factor: 0.5
+  reconstr_l1_coef: 1
+  pl_coef: 0.01
+  w_init_l2_reg_coef: 1
+  optimize_only_keys: [
+    latent_wprime:0:0, latent_wprime:0:1, latent_wprime:1:0, latent_wprime:1:1,
+    latent_wprime:2:0, latent_wprime:2:1, latent_wprime:3:0, latent_wprime:3:1,
+    latent_wprime:4:0, latent_wprime:4:1, latent_wprime:5:0, latent_wprime:5:1,
+    latent_wprime:6:0, latent_wprime:6:1, latent_wprime:7:0, latent_wprime:7:1,
+    noise:0:0, noise:1:0, noise:2:0, noise:3:0, noise:4:0, noise:5:0, noise:6:0, noise:7:0,
+    noise:0:1, noise:1:1, noise:2:1, noise:3:1, noise:4:1, noise:5:1, noise:6:1, noise:7:1,
+  ]
+  noise_grad_scale: 0.001
+  latent_w_grad_scale_still: 1
+  latent_w_grad_scale_movable: 1
+
+generator_fine_tune_kwargs:
+  max_iters: 0
+#  lr: 0.001
+#  l1_coef: 1
+#  pl_coef: 0.1
+
+shift_kwargs:
+  steps: 100
+  shift_names:
+    - noise:0:1
+    - noise:1:1
+    - noise:2:1
+    - noise:3:1
+    - noise:4:1
+    - noise:5:1
+    - noise:6:1
+    - noise:7:1
+  rescale_after_shift: True
+  max_shift: 100
+  min_shift: 1
+  shift_in_hr: 512
+  num_real_homs_per_image: 100
+
+video_kwargs:
+  fps: 30
+
+#segmentation: False
+segmentation:
+  module_kwargs:
+    models_dirname: pretrained_models/ade20k-resnet50dilated-ppm_deepsup
+  erode: 0
+  predict_kwargs:
+    imgSizes: [256]
+  movable_classes: [2, 21]
+
+infer_using_mask: False
+
+full_output: False
+save_frames_as_jpg: True
+calc_metrics: True
+lpips_model_path: pretrained_models/lpips_models/vgg.pth

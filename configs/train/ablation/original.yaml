@@ -1,0 +1,6 @@
+samples_per_phase: 600_000
+
+max_size: 128
+from_rgb_activate: false
+mixing: true
+loss_fn: 'r1'

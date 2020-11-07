@@ -1,0 +1,29 @@
+generator_kwargs:
+  model_name: 256
+  model_iter: 475000
+
+model_kwargs:
+  depth: 10
+  dz_size: 4
+
+dataset_kwargs:
+  batch_size: 512
+  length: 10000
+
+criterion_kwargs:
+  abs_l1_coef: 10
+  rel_l1_coef: 10
+  rel_cos_coef: 1
+
+lr_scheduler:
+  factor: 0.5
+  patience: 5
+  verbose: True
+
+train_eval_loop_kwargs:
+  epoch_n: 10000
+  early_stopping_patience: 1000
+  max_batches_per_epoch_train: 10000
+  max_batches_per_epoch_val: 2000
+  save_models_freq: 2
+  lr: 0.01
