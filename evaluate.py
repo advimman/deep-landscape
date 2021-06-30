@@ -257,13 +257,5 @@ if __name__ == '__main__':
                          default=os.path.join(constants.RESULT_DIR, 'pretrained_models/lpips_models/vgg.pth'),
                          help='Path to vgg.pth')
 
-    # think of this
-    aparser.add_argument('--thisisreal', action='store_true', help='Do we calculate metrics for real videos?')
-
-    # the same?
-    aparser.add_argument('--real-frames', type=str,
-                        default=os.path.join(constants.RESULT_DIR, 'test_images'),
-                        help='Path to folder with real first frames to calculate FID')
-
     main(aparser.parse_args())
 
