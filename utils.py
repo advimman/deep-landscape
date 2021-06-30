@@ -219,12 +219,12 @@ def save_sample(generator, alpha, step, code_size, resolution, save_dir, name,
 
             if save_images:
                 img_nrow = max(nrow // images_n_frames, 1)
-                save_image_samples(save_dir, save_name, latents[:img_nrow], img_nrow, ncol,
+                save_image_samples(save_dir, save_name, latents[:img_nrow], 1, ncol,
                                    generator, step, alpha, mean_style, truncation_psi,
                                    images_n_frames, inversed, separate_files)
 
             if save_video:
-                save_video_samples(save_dir, save_name, latents, nrow, ncol,
+                save_video_samples(save_dir, save_name, latents, 1, ncol,
                                    generator, step, alpha, mean_style,
                                    truncation_psi, resolution,
                                    style_change_mode, noise_change_modes,
