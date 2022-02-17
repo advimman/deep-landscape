@@ -16,7 +16,7 @@ Official repository for the paper E. Logacheva, R. Suvorov, O. Khomenko, A. Mash
 * `pip3 install -r requirements.txt`
 
 ## Usage
-Download approprate [everything from here](https://drive.google.com/drive/folders/1HqrT8SwkPOg_N9b2-KLZGUAi4OiLMFEz?usp=sharing) and put in the `results` directory.
+Download [everything from here](https://drive.google.com/drive/folders/1HqrT8SwkPOg_N9b2-KLZGUAi4OiLMFEz?usp=sharing) and put in the `results` directory.
 
 ### Homographies
 Use ``homographies/manual_homographies`` to reproduce the paper; use ``homographies/manual_homographies_x2.5`` if you want the speed to match the speed of real videos in test data; use `homographies/selected_homographies` to get the best visual results.
